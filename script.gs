@@ -7,7 +7,7 @@ function onFormSubmit(e) {
   // Extract form responses and metadata
   const formResponses = e.response.getItemResponses(); // Get the user's responses
   const formTitle = e.source.getTitle(); // Title of the form
-  const formTimestamp = e.source.getTimestamp(); // Timestamp of form submission
+  const formTimestamp = e.response.getTimestamp(); // Timestamp of form submission
 
   // Map responses to a simplified format of question-answer pairs
   const responses = formResponses.map(itemResponse => {
